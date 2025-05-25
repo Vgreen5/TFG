@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Usuario {
-    // Campos de la tabla docent
+   
     private String document;
     private String nom;
     private String cognom1;
@@ -18,14 +18,14 @@ public class Usuario {
     private boolean ensenyament;
     private boolean organisme;
 
-    // Campos de la tabla login (suponiendo que están relacionados)
+ 
     private String mail;
     private boolean esAdmin;
 
-    // Constructor vacío (necesario para mapear desde ResultSet)
+    
     public Usuario() {}
 
-    // Constructor completo
+ 
     public Usuario(String document, String nom, String cognom1, String cognom2,
                    String tipoDoc, String sexe, String dataIngres,
                    String horesLloc, String horesDedicades, String dataNaix,
@@ -48,7 +48,7 @@ public class Usuario {
         this.esAdmin = esAdmin;
     }
 
-    // Método para parsear fechas en formato yyyy-MM-dd
+    
     private LocalDate parseFecha(String fecha) {
         if (fecha == null || fecha.isEmpty()) {
             return null;
@@ -60,7 +60,7 @@ public class Usuario {
         }
     }
 
-    // Getters y setters
+   
     public String getDocument() { return document; }
     public void setDocument(String document) { this.document = document; }
 
