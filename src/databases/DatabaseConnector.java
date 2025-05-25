@@ -12,10 +12,8 @@ public class DatabaseConnector {
 
     public static Connection getConnection() throws SQLException {
         try {
-            // Cargar el controlador JDBC para MySQL
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            // Conectar a la base de datos
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+             Class.forName("com.mysql.cj.jdbc.Driver");
+             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException e) {
             throw new SQLException("Error al cargar el controlador JDBC.", e);
         }
