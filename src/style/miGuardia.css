@@ -1,10 +1,10 @@
-/* Contenedor principal */
+ 
 .dashboard-container {
     -fx-padding: 18;
     -fx-background-color: #fff8f0;
 }
 
-/* Título widget */
+ 
 .widget-title {
     -fx-font-size: 19px;
     -fx-font-weight: bold;
@@ -12,7 +12,7 @@
     -fx-padding: 12 0 12 0;
 }
 
-/* Tabla miguardia */
+ 
 .tabla-miguardia {
     -fx-background-color: white;
     -fx-border-color: #ddd;
@@ -20,7 +20,7 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
 }
 
-/* --- Barra columna común --- */
+ 
 .tabla-miguardia .column-header-background {
     -fx-background-color: linear-gradient(to bottom, #DF5A08, #B44300);
     -fx-padding: 6 0 6 0;
@@ -33,7 +33,7 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 1, 0, 0, 1);
 }
 
-/* Filas alternadas */
+ 
 .tabla-miguardia .table-row-cell:odd {
     -fx-background-color: #FFF5E5;
 }
@@ -42,13 +42,13 @@
     -fx-background-color: #FFFFFF;
 }
 
-/* Fila seleccionada */
+ 
 .tabla-miguardia .table-row-cell:selected {
     -fx-background-color: #DF5A08;
     -fx-text-fill: white;
 }
 
-/* Celdas */
+ 
 .tabla-miguardia .table-cell {
     -fx-padding: 8 14;
     -fx-text-fill: #444;
