@@ -24,7 +24,7 @@ public class Horario {
         setFaltara(faltara);
     }
     
-    // Getters y setters
+     
     public int getId() { return id.get(); }
     public void setId(int id) { this.id.set(id); }
     
