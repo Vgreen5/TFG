@@ -1,0 +1,94 @@
+/* Fondo degradado verde */
+.background-gradient {
+    -fx-background-color: linear-gradient(to bottom, #DF5A08, #A8EB12);
+}
+
+/* Contenedor del panel de login */
+.login-container {
+    -fx-alignment: center;
+    -fx-padding: 0 0 50 0; 
+    -fx-max-width: 50%;
+}
+
+/* Panel de login */
+.login-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: rgba(0, 0, 0, 0.1);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);
+    -fx-min-width: 380px;
+    -fx-max-width: 380px;
+}
+
+/* Textos */
+.title-text {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+}
+
+.subtitle-text {
+    -fx-font-size: 13px;
+    -fx-fill: #7f8c8d;
+}
+
+/* Campos de formulario */
+.form-container {
+    -fx-padding: 0;
+    -fx-spacing: 12px;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #34495e;
+}
+
+.text-field, .password-field {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 38px;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-padding: 0 12px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #2E8B57;
+}
+
+/* Hipervínculo */
+.forgot-password-link {
+    -fx-text-fill: #2E8B57;
+    -fx-font-size: 13px;
+}
+
+.forgot-password-link:hover {
+    -fx-text-fill: #228B22;
+    -fx-underline: true;
+}
+
+/* Botón */
+.login-button {
+    -fx-background-color: #ff7651;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: DF5A08;
+}
+
+.login-button:pressed {
+    -fx-background-color: DF5A08;
+}

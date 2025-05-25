@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@../style/Guardia.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.GuardiasController">
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10" styleClass="dashboard-container">
+            <!-- Encabezado y Filtros -->
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="widget-header">
+                <Label styleClass="widget-title" text="Guardias Disponibles" />
+                <Region HBox.hgrow="ALWAYS" />
+                <DatePicker fx:id="dpFechaFiltro" promptText="Filtrar por fecha" />
+                <Button fx:id="btnFiltrar" onAction="#filtrarGuardias" text="Filtrar" />
+                <Button fx:id="btnRefrescar" onAction="#cargarGuardiasDisponibles" text="Refrescar" />
+                <Button fx:id="btnLimpiarFiltro" text="Limpiar filtro" onAction="#limpiarFiltro" />
+            </HBox>
+
+            <!-- Tabla de guardias -->
+            <TableView fx:id="tvGuardias" prefHeight="400" styleClass="guardias-table">
+                <columns>
+                    <TableColumn fx:id="colFecha" text="Fecha">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="fecha" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colHoraInicio" text="Hora Inicio">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="horaInicio" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colHoraFin" text="Hora Fin">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="horaFin" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colAula" text="Aula">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="aula" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colDocente" text="Docente">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="docenteId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colAccion" text="Acción" />
+                </columns>
+            </TableView>
+
+            <!-- Mensaje si no hay resultados -->
+            <Label fx:id="lblMensaje" styleClass="placeholder-text" text="No hay guardias disponibles actualmente." visible="false" />
+        </VBox>
+    </center>
+</BorderPane>

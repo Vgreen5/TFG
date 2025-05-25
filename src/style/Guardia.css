@@ -1,0 +1,55 @@
+/* Contenedor principal */
+.dashboard-container {
+    -fx-padding: 20;
+}
+
+/* Título widget */
+.widget-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #DF5A08;
+    -fx-padding: 10 0 10 0;
+    -fx-effect: dropshadow(gaussian, rgba(223,90,8,0.8), 3, 0, 0, 1);
+}
+
+/* Tabla guardias */
+.tabla-guardias {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 6, 0, 0, 3);
+}
+
+/* --- Barra columna común --- */
+.tabla-guardias .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #DF5A08, #B44300);
+    -fx-padding: 6 0 6 0;
+}
+
+.tabla-guardias .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 1, 0, 0, 1);
+}
+
+/* Filas alternadas */
+.tabla-guardias .table-row-cell:odd {
+    -fx-background-color: #FFF9F0;
+}
+
+.tabla-guardias .table-row-cell:even {
+    -fx-background-color: #FFFFFF;
+}
+
+/* Fila seleccionada */
+.tabla-guardias .table-row-cell:selected {
+    -fx-background-color: #DF5A08;
+    -fx-text-fill: white;
+}
+
+/* Celdas */
+.tabla-guardias .table-cell {
+    -fx-padding: 8 12;
+    -fx-text-fill: #444;
+}
