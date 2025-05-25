@@ -14,7 +14,7 @@
 <BorderPane stylesheets="@../style/Guardia.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.GuardiasController">
     <center>
         <VBox alignment="TOP_CENTER" spacing="10" styleClass="dashboard-container">
-            <!-- Encabezado y Filtros -->
+   
             <HBox alignment="CENTER_LEFT" spacing="10" styleClass="widget-header">
                 <Label styleClass="widget-title" text="Guardias Disponibles" />
                 <Region HBox.hgrow="ALWAYS" />
@@ -24,8 +24,7 @@
                 <Button fx:id="btnLimpiarFiltro" text="Limpiar filtro" onAction="#limpiarFiltro" />
             </HBox>
 
-            <!-- Tabla de guardias -->
-            <TableView fx:id="tvGuardias" prefHeight="400" styleClass="guardias-table">
+             <TableView fx:id="tvGuardias" prefHeight="400" styleClass="guardias-table">
                 <columns>
                     <TableColumn fx:id="colFecha" text="Fecha">
                         <cellValueFactory>
