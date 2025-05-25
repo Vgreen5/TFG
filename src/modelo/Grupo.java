@@ -5,7 +5,7 @@ public class Grupo {
     private String nombre;
     private boolean ensenyanza;
     private boolean finia;
-    private String tutorId; // documento del docente tutor
+    private String tutorId; 
 	public String getCodigo() {
 		return codigo;
 	}
@@ -37,5 +37,5 @@ public class Grupo {
 		this.finia = finia;
 	}
 
-    // Constructor, getters y setters
+ 
 }
