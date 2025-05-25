@@ -13,7 +13,7 @@ public class Guardia {
     private String aula;
     private boolean disponible;
 
-    // 🔹 Campo adicional que viene del ResultSet, pero no está en la tabla
+    
     private String estado;
 
     public Guardia() {}
@@ -31,7 +31,7 @@ public class Guardia {
         this.estado = estado;
     }
 
-    // Getters y setters
+    
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
