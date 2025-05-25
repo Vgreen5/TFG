@@ -1,16 +1,15 @@
-/* Fondo degradado verde */
+ 
 .background-gradient {
     -fx-background-color: linear-gradient(to bottom, #DF5A08, #A8EB12);
 }
 
-/* Contenedor del panel de login */
+ 
 .login-container {
     -fx-alignment: center;
     -fx-padding: 0 0 50 0; 
     -fx-max-width: 50%;
 }
-
-/* Panel de login */
+ 
 .login-panel {
     -fx-background-color: rgba(255, 255, 255, 0.95);
     -fx-background-radius: 12;
@@ -22,7 +21,7 @@
     -fx-max-width: 380px;
 }
 
-/* Textos */
+ 
 .title-text {
     -fx-font-size: 26px;
     -fx-font-weight: bold;
@@ -34,7 +33,7 @@
     -fx-fill: #7f8c8d;
 }
 
-/* Campos de formulario */
+ 
 .form-container {
     -fx-padding: 0;
     -fx-spacing: 12px;
@@ -61,7 +60,7 @@
     -fx-border-color: #2E8B57;
 }
 
-/* Hipervínculo */
+ 
 .forgot-password-link {
     -fx-text-fill: #2E8B57;
     -fx-font-size: 13px;
@@ -72,7 +71,7 @@
     -fx-underline: true;
 }
 
-/* Botón */
+ 
 .login-button {
     -fx-background-color: #ff7651;
     -fx-text-fill: white;
