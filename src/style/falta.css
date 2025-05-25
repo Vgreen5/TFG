@@ -1,4 +1,4 @@
-/* Estilos generales */
+ 
 .header-bar {
     -fx-background-color: #DF5A08;
 }
@@ -22,7 +22,7 @@
     -fx-border-radius: 5;
 }
 
-/* Estilos para botones */
+ 
 .cancel-button {
     -fx-background-color: #FF9800;
     -fx-text-fill: white;
@@ -51,13 +51,13 @@
     -fx-cursor: hand;
 }
 
-/* Estilos para mensajes */
+ 
 .user-info {
     -fx-font-size: 14px;
     -fx-padding: 5px;
 }
 
-/* Estilos para la tabla */
+ 
 .table-view {
     -fx-base: white;
     -fx-control-inner-background: white;
