@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml" fx:controller="controlador.JornadaController" stylesheets="@../style/main.css"  prefWidth="800" prefHeight="600">
+
+    <top>
+        <VBox>
+            <HBox styleClass="header-bar" alignment="CENTER_LEFT">
+                <padding><Insets top="15" right="20" bottom="15" left="20"/></padding>
+                <Label text="Gestión de Jornada Laboral" styleClass="header-title"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="30">
+            <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+
+            <VBox styleClass="dashboard-widget" spacing="15" alignment="CENTER">
+                <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+                <Label fx:id="estadoJornadaLabel" styleClass="widget-title" text="Estado de Jornada"/>
+
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Estado actual:" style="-fx-font-weight: bold;"/>
+                    <Label fx:id="estadoActualLabel" style="-fx-text-fill: #DF5A08; -fx-font-weight: bold;"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Hora actual:" style="-fx-font-weight: bold;"/>
+                    <Label fx:id="horaActualLabel"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Última acción:" style="-fx-font-weight: bold;"/>
+                    <Label fx:id="ultimaAccionLabel"/>
+                </HBox>
+            </VBox>
+
+            <VBox styleClass="dashboard-widget" spacing="20" alignment="CENTER">
+                <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+                <Text text="Registro de Jornada" style="-fx-font-size: 18px; -fx-fill: #DF5A08; -fx-font-weight: bold;"/>
+
+                <HBox spacing="30" alignment="CENTER">
+                    <VBox spacing="10" alignment="CENTER">
+                        <Label text="Iniciar Jornada" style="-fx-font-weight: bold;"/>
+                        <Button fx:id="btnRegistrarInicio" text="Registrar Inicio" onAction="#registrarInicioJornada"
+                                styleClass="widget-action-button" prefWidth="150"/>
+                        <Label fx:id="inicioRegistradoLabel" style="-fx-font-size: 12px;"/>
+                    </VBox>
+
+                    <Separator orientation="VERTICAL" prefHeight="80"/>
+
+                    <VBox spacing="10" alignment="CENTER">
+                        <Label text="Finalizar Jornada" style="-fx-font-weight: bold;"/>
+                        <Button fx:id="btnRegistrarFin" text="Registrar Fin" onAction="#registrarFinJornada"
+                                styleClass="widget-action-button" prefWidth="150"/>
+                        <Label fx:id="finRegistradoLabel" style="-fx-font-size: 12px;"/>
+                    </VBox>
+                </HBox>
+
+            </VBox>
+
+            <VBox fx:id="mensajeContainer" alignment="CENTER" visible="false">
+                <Label fx:id="mensajeLabel" styleClass="user-info"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" spacing="10">
+            <Label fx:id="fechaActualLabel" style="-fx-font-size: 12px; -fx-text-fill: #777;"/>
+        </VBox>
+    </bottom>
+</BorderPane>

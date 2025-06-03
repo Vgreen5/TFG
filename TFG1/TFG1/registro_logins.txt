@@ -1,0 +1,6 @@
+[2025-05-21 01:02:04] Login:  (FRANCISCO JAVIER F) - Documento: 010969028D - Rol: Admin
+[2025-05-21 01:02:09] Login:  (FRANCISCO JAVIER F) - Documento: 010969028D - Rol: Admin
+[2025-05-21 01:05:29] Login:  (FRANCISCO JAVIER F) - Documento: 010969028D - Rol: Admin
+[2025-05-21 01:05:42] Login:  (ANGEL A) - Documento: 010960328X - Rol: Usuario
+[2025-05-21 01:08:17] Login:  (FRANCISCO JAVIER F) - Documento: 010969028D - Rol: Admin
+[2025-05-21 01:08:32] Login:  (FRANCISCO JAVIER F) - Documento: 010969028D - Rol: Admin

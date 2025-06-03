@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane stylesheets="@../style/Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
+
+    <center>
+        <StackPane styleClass="background-gradient">
+            <VBox alignment="CENTER" styleClass="login-container">
+                <VBox alignment="CENTER" spacing="20" styleClass="login-panel">
+                    <padding>
+                        <Insets bottom="30" left="40" right="40" top="30" />
+                    </padding>
+                    
+                    <Text styleClass="title-text" text="Sistema Docente" />
+                    <Text styleClass="subtitle-text" text="Inicio de Sesión" />
+                    
+                    <VBox alignment="CENTER_LEFT" spacing="10" styleClass="form-container">
+                        <Label styleClass="input-label" text="Usuario" />
+                        <TextField fx:id="userField" promptText="DNI o nombre de usuario" styleClass="text-field" />
+                        
+                        <Label styleClass="input-label" text="Contraseña" />
+                        <PasswordField fx:id="passField" promptText="Introduzca su contraseña" styleClass="text-field" />
+                    </VBox>
+                    
+                    <Button fx:id="loginBtn" onAction="#handleLogin" styleClass="login-button" text="Acceder" />
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

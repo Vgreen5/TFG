@@ -1,0 +1,19 @@
+Aplicación Gestionator
+
+
+Versión de Java
+
+Java versión 22.0.2
+
+Versión de JavaFX (entorno grafico)
+
+JavaFX 21.0.7
+
+
+Como descargar el debian:
+
+1. Acceder a la carpeta donde contiene el .zip descomprimir.
+2. Entrar con la terminal a esa carpeta.
+3. Aplicar el comando "Sudo dpkg -i gestionator_1.0_amd64.deb"
+4. Una vez descomprimido la aplicación buscar en el buscador Gestionator
+5. Disfrute de su aplicación.

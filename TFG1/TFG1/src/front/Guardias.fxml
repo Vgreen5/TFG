@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.GuardiasController" stylesheets="@../style/Main.css">
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10" styleClass="dashboard-container">
+        
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="widget-header">
+                <Label text="Guardias Disponibles" styleClass="widget-title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <DatePicker fx:id="dpFechaFiltro" promptText="Filtrar por fecha"/>
+                <Button fx:id="btnFiltrar" text="Filtrar" onAction="#filtrarGuardias"/>
+                <Button fx:id="btnRefrescar" text="Refrescar" onAction="#refrescarTabla"/>
+                <Button fx:id="btnLimpiarFiltro" text="Limpiar filtro" onAction="#limpiarFiltro"/>
+            </HBox>
+
+            <TableView fx:id="tvGuardias" prefHeight="400" styleClass="guardias-table">
+                <columns>
+                    <TableColumn fx:id="colFecha" text="Fecha"/>
+                    <TableColumn fx:id="colHoraInicio" text="Hora Inicio"/>
+                    <TableColumn fx:id="colHoraFin" text="Hora Fin"/>
+                    <TableColumn fx:id="colAula" text="Aula"/>
+                    <TableColumn fx:id="colDocente" text="Docente"/>
+                    <TableColumn fx:id="colAccion" text="Acción"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="lblMensaje"
+                   text="No hay guardias disponibles para la fecha seleccionada"
+                   styleClass="placeholder-text"
+                   visible="false"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane stylesheets="@../style/Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.GestionController">
+
+    <top>
+        <HBox spacing="10" styleClass="search-bar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <TextField fx:id="txtBuscarId" promptText="Buscar por ID docente" />
+            <Button fx:id="btnBuscar" onAction="#buscarUsuario" styleClass="primary-button" text="Buscar" />
+            <Button fx:id="btnLimpiar" onAction="#limpiarBusqueda" styleClass="secondary-button" text="Limpiar" />
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaUsuarios" prefHeight="400" prefWidth="600" styleClass="report-table">
+            <columns>
+                <TableColumn fx:id="colDocenteId" prefWidth="190.0" text="ID Docente" />
+                <TableColumn fx:id="colPassword" prefWidth="221.0" text="Contraseña" />
+                <TableColumn fx:id="colAdmin" prefWidth="188.0" text="Administrador" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <Button fx:id="btnCambiarPassword" onAction="#cambiarPassword" styleClass="primary-button" text="Cambiar Contraseña" />
+            <Button fx:id="btnToggleAdmin" onAction="#toggleAdmin" styleClass="primary-button" text="Toggle Admin" />
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400" prefWidth="600" spacing="15" styleClass="dashboard-container" stylesheets="@../style/Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MiGuardiaController">
+
+    <Label styleClass="widget-title" text="Guardias que has cogido">
+        <VBox.margin>
+            <Insets bottom="10" />
+        </VBox.margin>
+    </Label>
+
+    <TableView fx:id="tablaGuardias" prefHeight="350" prefWidth="580" styleClass="tabla-guardias">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="60" text="ID" />
+            <TableColumn fx:id="colDocente" prefWidth="160" text="Docente" />
+            <TableColumn fx:id="colFecha" prefWidth="120" text="Fecha" />
+            <TableColumn fx:id="colHoraInicio" prefWidth="100" text="Hora Inicio" />
+            <TableColumn fx:id="colHoraFin" prefWidth="120" text="Hora Fin" />
+            <TableColumn fx:id="colAula" prefWidth="60" text="Aula" />
+            <TableColumn fx:id="colEstado" prefWidth="100" text="Estado" />
+        </columns>
+    </TableView>
+
+</VBox>
