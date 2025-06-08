@@ -318,35 +318,37 @@ public class MainController implements Initializable {
             return;
         }
 
-         
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Guardar informe como TXT");
         fileChooser.getExtensionFilters().add(
             new FileChooser.ExtensionFilter("Archivos de texto", "*.txt")
         );
         fileChooser.setInitialFileName("informe_" + LocalDate.now().toString() + ".txt");
-        
-        File file = fileChooser.showSaveDialog(tablaFaltas.getScene().getWindow());
-        
+
+         Window window = null;
+        if (tablaFaltas.getScene() != null) {
+            window = tablaFaltas.getScene().getWindow();
+        }
+
+        File file = fileChooser.showSaveDialog(window);
+
         if (file == null) {
             return; 
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            
             writer.write("INFORME DOCENTE\n");
             writer.write("================\n\n");
             writer.write("Usuario: " + lblUsuarioInforme.getText() + "\n");
             writer.write("Periodo: " + lblPeriodoInforme.getText() + "\n\n");
 
-            
             if (cbFaltas.isSelected() && !tablaFaltas.getItems().isEmpty()) {
                 writer.write("FALTAS (" + lblTotalFaltas.getText() + ")\n");
                 writer.write("----------------------------------------\n");
                 writer.write(String.format("%-10s %-12s %-20s %-10s\n", 
                     "Fecha", "Horario", "Motivo", "Justificada"));
                 writer.write("----------------------------------------\n");
-                
+
                 for (Absencia falta : tablaFaltas.getItems()) {
                     writer.write(String.format("%-10s %-12s %-20s %-10s\n",
                         falta.getFecha().toString(),
@@ -357,14 +359,14 @@ public class MainController implements Initializable {
                 }
                 writer.write("\n");
             }
- 
+
             if (cbGuardias.isSelected() && !tablaGuardiasInforme.getItems().isEmpty()) {
                 writer.write("GUARDIAS (" + lblTotalGuardias.getText() + ")\n");
                 writer.write("--------------------------------------------------\n");
                 writer.write(String.format("%-10s %-12s %-8s %-20s\n", 
                     "Fecha", "Horario", "Aula", "Estado"));
                 writer.write("--------------------------------------------------\n");
-                
+
                 for (Guardia guardia : tablaGuardiasInforme.getItems()) {
                     writer.write(String.format("%-10s %-12s %-8s %-20s\n",
                         guardia.getFecha().toString(),
@@ -375,13 +377,28 @@ public class MainController implements Initializable {
                 writer.write("\n");
             }
 
-        
             mostrarAlerta("Exportación exitosa", 
                 "El informe se ha guardado correctamente en:\n" + file.getAbsolutePath());
 
         } catch (IOException e) {
             mostrarError("Error al exportar el informe: " + e.getMessage());
         }
+    }
+
+    private boolean validarFiltrosInforme() {
+        if (dpFechaInicio.getValue() == null || dpFechaFin.getValue() == null) {
+            mostrarError("Debe seleccionar un rango de fechas.");
+            return false;
+        }
+        if (dpFechaInicio.getValue().isAfter(dpFechaFin.getValue())) {
+            mostrarError("La fecha de inicio no puede ser posterior a la fecha fin.");
+            return false;
+        }
+        if (!cbFaltas.isSelected() && !cbGuardias.isSelected()) {
+            mostrarError("Debe seleccionar al menos un tipo de informe (Faltas o Guardias).");
+            return false;
+        }
+        return true;
     }
 
     private boolean validarFiltrosInforme() {
